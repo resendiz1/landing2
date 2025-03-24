@@ -17,6 +17,13 @@ body{
     font-family: Arial, sans-serif;
 }
 
+
+
+
+
+
+
+
 .cursor{
     display: inline-block;
     width: 0.04em; /* Se ajusta según el tamaño del texto */
@@ -114,7 +121,7 @@ body{
 
 
 .escribible{
-    font-size: 70px;
+    font-size: 55px;
 }
 
 #escribible{
