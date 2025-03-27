@@ -27,7 +27,7 @@
     </div>
 
     <div class="container-fluid">
-        <nav class="row mt-2">
+        <nav class="row mt-2" id="nabvar">
 
             <div class="col-12 text-center p-3">
                 <h1 class="titulo fw-bold p-0 m-0"> &lt; Juan Pancho's /&gt; <span class="cursor"></span> </h1>
@@ -35,22 +35,48 @@
                <a href="https://maps.app.goo.gl/AUvZSE28xhda8c5N7" target="_blank" class="link"> <h6>Tehuacan, Puebla. Fraccionamiento Vista Natura  <i class="fa-solid fa-location-dot"></i></h6></a>
             </div>
 
-            <div class="col-12 text-center bg-warning p-0 m-2">
+
+            <div class="col-12  bg-warning ">
                 <div class="row justify-content-center">
-                    <div class="col-sm-6 col-md-3 col-lg-1  menu  p-1">
+                    <div class="col-sm-6 col-md-3 col-lg-2  menu  p-1">
                         <a href="#inicio" class="links">Inicio</a>
                     </div>
-                    <div class="col-sm-6 col-md-3 col-lg-1  menu p-1">
+                    <div class="col-sm-6 col-md-3 col-lg-2  menu p-1">
                         <a href="#desarrollo" class="links">Desarrollo Web</a>
                     </div>
-                    <div class="col-sm-6 col-md-3 col-lg-1  menu p-1">
+                    <div class="col-sm-6 col-md-5 col-lg-2  menu p-1">
                         <a href="#instalacion" class="links">Instalación de software</a>
+                    </div>
+                    <div class="col-sm-6 col-md-5 col-lg-2  menu p-1">
+                        <a href="#juegos" class="links">Venta de Videojuegos</a>
+                    </div>
+                    <div class="col-sm-6 col-md-5 col-lg-2  menu p-1">
+                        <a href="#contacto" class="links">Contacto</a>
                     </div>
                 </div>
             </div>
 
         </nav>
     </div>
+
+
+    <!-- aqui esta el menu flotante -->
+    <div id="floatingMenu" class="floating-menu">
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+        <div id="floatingLinks" class="floating-links">
+            <a href="#inicio" class="links">Inicio</a>
+            <a href="#desarrollo" class="links">Desarrollo Web</a>
+            <a href="#instalacion" class="links">Instalación de software</a>
+            <a href="#juegos" class="links">Venta de Videojuegos</a>
+            <a href="#contacto" class="links">Contacto</a>
+        </div>
+
+    </div>
+
+    <!-- aqui esta el menu flotante -->
+
 
 
     <div class="container mt-5">
@@ -282,17 +308,9 @@
 
 
 <div class="container mt-5">
+
     <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-6">
-            <h1 class="fw-bold titulo-seccion display-5">Venta de Videojuegos.</h1>
-            <h3> Venta de videojuegos para consolas de videojuegos para PC. </h3>
-            <ul>
-                <li>Stick Arcade</li>
-                <li>Tablero Arcade</li>
-                <li>Juegos para PC</li>
-            </ul>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6">
+        <div class="col-sm-12 col-md-12 col-lg-7">
             <div id="juegos" class="carousel slide" data-bs-interval="3000" data-bs-wrap="true" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -322,13 +340,23 @@
             </div>
 
         </div>
+        <div class="col-sm-12 col-md-12 col-lg-5">
+            <h1 class="fw-bold titulo-seccion display-5">Venta de Videojuegos.</h1>
+            <h3> Venta de videojuegos para consolas de videojuegos para PC. </h3>
+            <ul>
+                <li>Stick Arcade</li>
+                <li>Tablero Arcade</li>
+                <li>Juegos para PC</li>
+            </ul>
+        </div>
+
     </div>
 </div>
 
 <br><br><br>
 <hr>
 
-<div class="container mt-5">
+<div class="container mt-5" id="contacto">
     <div class="row">
         <div class="col-6">
             <h1>WhatsApp: </h1>
@@ -361,43 +389,6 @@
 
 
 
-<script>
-    const carousel = document.querySelector('.carousel');
-    const images = document.querySelectorAll('.carousel img');
-    const btnLeft = document.querySelector('.btn-left');
-    const btnRight = document.querySelector('.btn-right');
-
-    let index = 0;
-
-
-
-    btnRight.addEventListener('click', () => {
-        index = (index + 1) % images.length;
-        updateCarousel();
-    });
-
-
-    btnLeft.addEventListener('click', () => {
-        index = (index - 1 + images.length) % images.length;
-        updateCarousel();
-    });
-
-
-    function updateCarousel() {
-        const offset = -index * 100;
-        carousel.style.transform = `translateX(${offset}%)`;
-    }
-
-
-    setInterval(() =>{
-        index = (index + 1) % images.length;
-        updateCarousel();
-    }, 3000);
-
-
-
-
-</script>
 
 
 <script>
@@ -407,6 +398,34 @@
         backSpeed: 30, // Velocidad de borrado
         loop: true // Para repetir los textos
     });
+</script>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        let navbar = document.getElementById("navbar");
+        let floatingMenu = document.getElementById("floatingMenu");
+
+        window.addEventListener("scroll", function(){
+            let navbarHeight = nabvar.offsetHeight;
+            if(window.scrollY > navbarHeight){
+                floatingMenu.style.display = "block"
+
+            }
+            else{
+                floatingMenu.style.display = "none";
+            }
+        })
+
+    })
+
+    function toggleMenu(){
+        let links = document.getElementById("floatingLinks")
+        links.style.display = links.style.display === "flex" ? "none" : "flex"
+    }
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
