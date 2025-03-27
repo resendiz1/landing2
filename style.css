@@ -4,20 +4,25 @@
 
 
 
-body{
-    padding: 0px;
-    margin: 0px;
-    background-color: rgb(243, 243, 237)
-}
-
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 
 
@@ -101,7 +106,13 @@ body{
 
 .titulo{
     color: rgb(181, 119, 33);
-    font-size: 5vw;
+    font-size: 70px;
+}
+
+@media (max-width:700px) and (max-height: 800px){
+    .titulo{
+        font-size: 9vw;
+    }
 }
 
 
@@ -124,11 +135,24 @@ body{
     font-size: 55px;
 }
 
+
 #escribible{
-    font-size: 40px;
+    font-size: 30px;
     font-family: "Press Start 2P", system-ui;
     display: inline-flex;
     align-items: center;
+}
+
+@media (max-width: 400px) and (max-height: 700px) {
+    #escribible {
+        font-size: 25px; /* Cambio de tamaño si se cumple la condición */
+    }
+}
+
+@media (max-width: 300px) and (max-height: 700px) {
+    #escribible {
+        font-size: 15px; /* Cambio de tamaño si se cumple la condición */
+    }
 }
 
 #cursor{
