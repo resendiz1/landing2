@@ -66,11 +66,23 @@
             ☰
         </button>
         <div id="floatingLinks" class="floating-links">
-            <a href="#inicio" class="links">Inicio</a>
-            <a href="#desarrollo" class="links">Desarrollo Web</a>
-            <a href="#instalacion" class="links">Instalación de software</a>
-            <a href="#juegos" class="links">Venta de Videojuegos</a>
-            <a href="#contacto" class="links">Contacto</a>
+            <div class="row">
+                <div class="col-12 my-2">
+                    <a href="#inicio" class="links">Inicio</a>
+                </div>
+                <div class="col-12 my-2">
+                    <a href="#desarrollo" class="links">Desarrollo Web</a>
+                </div>
+                <div class="col-12 my-2">
+                    <a href="#instalacion" class="links">Instalación de software</a>
+                </div>
+                <div class="col-12 my-2">
+                    <a href="#juegos" class="links">Venta de Videojuegos</a>
+                </div>
+                <div class="col-12 my-2">
+                    <a href="#contacto" class="links">Contacto</a>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -403,28 +415,26 @@
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        
-        let navbar = document.getElementById("navbar");
-        let floatingMenu = document.getElementById("floatingMenu");
+document.addEventListener("DOMContentLoaded", function () {
+    let navbar = document.getElementById("nabvar");
+    let floatingMenu = document.getElementById("floatingMenu");
 
-        window.addEventListener("scroll", function(){
-            let navbarHeight = nabvar.offsetHeight;
-            if(window.scrollY > navbarHeight){
-                floatingMenu.style.display = "block"
+    window.addEventListener("scroll", function () {
+        let navbarHeight = navbar.offsetHeight;
+        if (window.scrollY > navbarHeight) {
+            floatingMenu.style.display = "block"; // Mostrar solo el botón ☰
+        } else {
+            floatingMenu.style.display = "none";
+            document.getElementById("floatingLinks").style.display = "none"; // Cerrar menú al subir
+        }
+    });
+});
 
-            }
-            else{
-                floatingMenu.style.display = "none";
-            }
-        })
+function toggleMenu() {
+    let links = document.getElementById("floatingLinks");
+    links.style.display = links.style.display === "flex" ? "none" : "flex";
+}
 
-    })
-
-    function toggleMenu(){
-        let links = document.getElementById("floatingLinks")
-        links.style.display = links.style.display === "flex" ? "none" : "flex"
-    }
 
 </script>
 

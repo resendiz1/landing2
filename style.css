@@ -29,14 +29,26 @@ img {
 
 .floating-menu{
     position: fixed;
-    bottom: 20px;
+    width: 20vw;
+    top: 20px;
     right: 20px;
-    background: #ffffff;
+    background: rgba(255 194 56);
     border-radius: 10px;
     padding: 10px;
     display: none;
     box-shadow: 0px 0px 10px rgba(0,0,0, 0.3);
     z-index: 1000;
+}
+
+@media(max-width:1000px) and (max-height:1000px){
+
+    .floating-menu{
+        width: 80%;
+        top: 0px;
+        
+    }
+
+
 }
 
 .menu-btn{
