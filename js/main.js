@@ -61,12 +61,13 @@ function correo(){
     else{
 
         let parametros = {
+            to_email:'arturo.resendiz@grupopabsa.com',
             nombre: $nombre,
             telefono:$telefono,
             mensaje: $mensaje
         }
 
-        emailjs.send("service_19kp3gr", 'template_zg0u38d', parametros)
+        emailjs.send("service_nnko2lm", 'template_zg0u38d', parametros)
             .then(response => {
 
                 $success.classList.remove('d-none');
