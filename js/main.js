@@ -12,12 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", function () {
         let navbarHeight = navbar.offsetHeight;
+
         if (window.scrollY > navbarHeight) {
             floatingMenu.style.display = "block"; // Mostrar solo el botón ☰
         } else {
             floatingMenu.style.display = "none";
             document.getElementById("floatingLinks").style.display = "none"; // Cerrar menú al subir
         }
+
+
+
+
     });
 });
 
@@ -98,12 +103,6 @@ function correo(){
 
 
 }
-
-
-
-
-
-
 
 
 
