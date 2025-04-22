@@ -98,11 +98,29 @@ function correo(){
 
 }
 
-
-
-
-
 }
 
+
+
+//Aqui est el js que hace que se ejecute el href al  clikar sobre su div
+document.querySelectorAll('.menu').forEach(div =>{
+    div.addEventListener('click', function(){
+        const enlace = this.querySelector('a');
+
+        if(enlace){
+            window.location.href = enlace.href;
+        }
+    })
+})
+
+document.querySelectorAll('.menu-flotante').forEach(div =>{
+    div.addEventListener('click', function(){
+        const enlace = this.querySelector('a');
+
+        if(enlace){
+            window.location.href = enlace.href;
+        }
+    })
+})
 
 
