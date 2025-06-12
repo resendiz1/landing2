@@ -6,30 +6,6 @@ var typed = new Typed('#escribible', {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    let navbar = document.getElementById("nabvar");
-    let floatingMenu = document.getElementById("floatingMenu");
-
-    window.addEventListener("scroll", function () {
-        let navbarHeight = navbar.offsetHeight;
-
-        if (window.scrollY > navbarHeight) {
-            floatingMenu.style.display = "block"; // Mostrar solo el botón ☰
-        } else {
-            floatingMenu.style.display = "none";
-            document.getElementById("floatingLinks").style.display = "none"; // Cerrar menú al subir
-        }
-
-
-
-
-    });
-});
-
-function toggleMenu() {
-    let links = document.getElementById("floatingLinks");
-    links.style.display = links.style.display === "flex" ? "none" : "flex";
-}
 
 
 
@@ -124,3 +100,23 @@ document.querySelectorAll('.menu-flotante').forEach(div =>{
 })
 
 
+
+
+{
+
+  const hamburger = document.getElementById('hamburger');
+  const dropdown = document.getElementById('dropdownMenu');
+  const links = dropdown.querySelectorAll('a');
+
+  hamburger.addEventListener('click', () => {
+    dropdown.classList.toggle('show');
+  });
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      dropdown.classList.remove('show');
+    });
+  });
+
+
+}

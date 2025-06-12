@@ -19,6 +19,141 @@ html, body {
     overflow-x: hidden;
 }
 
+ .carousel-con-gradiente {
+    height: 100vh;
+  }
+
+  .carousel-con-gradiente .carousel-inner,
+  .carousel-con-gradiente .carousel-item,
+  .carousel-con-gradiente .carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .carousel-con-gradiente .carousel-caption {
+    z-index: 3;
+    position: absolute;
+    bottom: 15%;
+  }
+
+  .carousel-con-gradiente .carousel-inner::before,
+  .carousel-con-gradiente .carousel-inner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .carousel-con-gradiente .carousel-inner::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 164, 118, 0.5), transparent);
+  }
+
+  .carousel-con-gradiente .carousel-inner::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(209, 118, 118, 0.5), transparent);
+  }
+
+
+
+  #carouselExampleCaptions {
+    height: 100vh;
+  }
+
+  .carousel-inner,
+  .carousel-item,
+  .carousel-item img {
+    height: 100vh;
+    object-fit: cover; /* Para que la imagen cubra todo el espacio sin deformarse */
+  }
+
+  .carousel-inner::before,
+  .carousel-inner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+
+
+
+
+
+
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .hamburger {
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: #ffc107;
+    padding: 10px;
+  }
+
+  .dropdown-content a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 10px;
+    border-bottom: 1px solid #333;
+  }
+
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown-content.show {
+    display: flex;
+  }
+
+  @media (max-width: 1000px) {
+    .desktop-menu {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: block;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .carousel-con-gradiente .carousel-caption {
+      bottom: unset;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 img {
     max-width: 100%;
     height: auto;
