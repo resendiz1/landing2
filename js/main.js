@@ -1,5 +1,12 @@
 var typed = new Typed('#escribible', {
-    strings: ['Reparación de equipos de cómputo', 'Desarrollo Web.', 'Venta de Videojuegos', 'Invitaciones y videos para dias festivos'], // Textos
+    strings: ['Reparación de equipos de cómputo', 'Desarrollo Web.', 'Venta de Videojuegos', 'Instalación de Software'], // Textos
+    typeSpeed: 50, // Velocidad de escritura
+    backSpeed: 30, // Velocidad de borrado
+    loop: true // Para repetir los textos
+});
+
+var typed = new Typed('#escribible2', {
+    strings: ['Reparación de equipos de cómputo', 'Desarrollo Web.', 'Venta de Videojuegos', 'Instalación de Software'], // Textos
     typeSpeed: 50, // Velocidad de escritura
     backSpeed: 30, // Velocidad de borrado
     loop: true // Para repetir los textos
