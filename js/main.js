@@ -127,3 +127,27 @@ document.querySelectorAll('.menu-flotante').forEach(div =>{
 
 
 }
+
+
+{
+      // Inicializar Isotope
+  var elem = document.querySelector('#gallery');
+  var iso = new Isotope(elem, {
+    itemSelector: '.grid-item',
+    layoutMode: 'masonry',
+    transitionDuration: '0.02s'
+  });
+
+  // Botones de filtro
+  var filters = document.querySelectorAll('[data-filter]');
+  filters.forEach(button => {
+    button.addEventListener('click', () => {
+      const filterValue = button.getAttribute('data-filter');
+      iso.arrange({ filter: filterValue });
+
+      // Estilos activos
+      filters.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+}
