@@ -19,9 +19,13 @@ html, body {
     overflow-x: hidden;
 }
 
+nav{
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.3); /* también oscurece un poco */
+}
 
 .blur-overlay{
-    position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -132,7 +136,7 @@ html, body {
     display: flex;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1135px) {
     .desktop-menu {
       display: none;
     }
