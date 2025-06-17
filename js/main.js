@@ -26,6 +26,69 @@ window.onload = function(){
     emailjs.init('mvA2hTi9RX5iDG6Ry');
 }
 
+function correo_modal(){
+
+
+    let $nombre = document.getElementById('nombre_modal').value;
+    let $telefono = document.getElementById('telefono_modal').value;
+    let $mensaje = document.getElementById('mensaje_modal').value;
+    let $error = document.getElementById('error');
+    let $success = document.getElementById('success');
+
+    if($nombre == '' || $telefono == '' || $mensaje == ''){
+
+        $error.classList.remove('d-none')
+
+        setTimeout(()=>{
+            $error.classList.add('d-none');
+        },4000)
+
+        return;
+        
+    }
+
+    else{
+
+        let parametros = {
+            to_email:'arturo.resendiz@grupopabsa.com',
+            nombre: $nombre,
+            telefono:$telefono,
+            mensaje: $mensaje
+        }
+
+        emailjs.send("service_nnko2lm", 'template_zg0u38d', parametros)
+            .then(response => {
+
+                $success.classList.remove('d-none');
+                
+                setTimeout(()=>{
+                    $success.classList.add('d-none');
+                }, 4000)
+
+                    document.getElementById('nombre_modal').value = '';
+                    document.getElementById('telefono_modal').value = '';
+                    document.getElementById('mensaje_modal').value = '';
+                
+
+            },error =>{
+                alert('El correo no se envio');
+            }
+        )
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 function correo(){
 
     let $nombre = document.getElementById('nombre').value;
@@ -75,10 +138,6 @@ function correo(){
         )
 
     }
-
-
-
-
 }
 
 }
@@ -129,14 +188,31 @@ document.querySelectorAll('.menu-flotante').forEach(div =>{
 }
 
 
+
+
+
+
 {
-      // Inicializar Isotope
+
+ // Inicializar Isotope
   var elem = document.querySelector('#gallery');
-  var iso = new Isotope(elem, {
-    itemSelector: '.grid-item',
-    layoutMode: 'masonry',
-    transitionDuration: '0.02s'
-  });
+
+    var iso = new Isotope(elem, {
+
+        itemSelector: '.grid-item',
+        layoutMode: 'masonry',
+        transitionDuration: '0.02s'
+
+    });
+
+
+
+
+
+
+
+
+
 
   // Botones de filtro
   var filters = document.querySelectorAll('[data-filter]');
@@ -150,4 +226,16 @@ document.querySelectorAll('.menu-flotante').forEach(div =>{
       button.classList.add('active');
     });
   });
+
+
+
+
+
+
+
+
+
+
+
+
 }

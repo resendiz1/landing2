@@ -28,24 +28,83 @@ nav{
 
 
 .grid-item {
-  width: 50%;
+  width: 20%;
   transition: transform 0.4s, opacity 0.4s;
 }
+
+
+
 .grid-item img {
   width: 100%;
   height: auto;
   border-radius: 12px;
 }
 
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
+
+
+
+.portafolio-container{
+  position: relative;
+  overflow: hidden;
 }
 
 
 
 
 
+.input-modal{
+  font-size: 30px;
+  font-family:"Cascadia Code", sans-serif;
+  border: none;
+  background-color: #e8cf85;
+}
+
+.input-modal:focus{
+  font-size: 30px;
+  font-family:"Cascadia Code", sans-serif;
+  border: none;
+  background-color: #ffd000;
+  color: rgb(0, 0, 0);
+  outline: 4px solid #000000;
+  outline-offset: 2px; /* Opcional: separación del borde */
+}
+
+
+.label-modal{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+
+
+
+
+.portafolio-overlay{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* color oscuro con transparencia */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.overlay-text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.portafolio-container:hover .portafolio-overlay {
+  opacity: 1;
+}
 
 
 
@@ -199,6 +258,12 @@ nav{
     .desktop-menu {
       display: none;
     }
+
+    .grid-item {
+      width: 50%;
+      transition: transform 0.4s, opacity 0.4s;
+    }
+
 
     .mobile-menu {
       display: block;

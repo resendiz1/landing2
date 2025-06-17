@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JuanPanchos</title>
+    <title>&lt; Juan Pancho's /&gt;</title>
     <link rel="stylesheet" href="/aos-master/dist/aos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -34,7 +34,7 @@
           <a href="#" class="links arimo">Inicio</a>
         </div>
         <div class="col-12 col-md-12 col-lg-auto menu enlace py-2 rounded px-4 text-center little-zoom cursor-pointer">
-          <a href="#desarrollo" class="links arimo">Desarrollo Web</a>
+          <a href="#portafolio" class="links arimo">Portafolio</a>
         </div>
         <div class="col-12 col-md-12 col-lg-auto menu enlace py-2 rounded px-4 text-center little-zoom cursor-pointer">
           <a href="#instalacion" class="links arimo">Instalación de software</a>
@@ -60,7 +60,7 @@
       </div>
       <div id="dropdownMenu" class="dropdown-content">
         <a href="#">Inicio</a>
-        <a href="#desarrollo">Desarrollo Web</a>
+        <a href="#portafolio">Portafolio</a>
         <a href="#instalacion">Instalación de software</a>
         <a href="#juegos">Venta de Videojuegos</a>
         <a href="#contacto">Contacto</a>
@@ -130,6 +130,7 @@
 
 <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
     <div class="row d-flex align-items-center justify-content-around p-5">
+
         
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center mt-4">
             <div id="soporte" class="carousel slide" data-bs-interval="3000" data-bs-wrap="true" data-bs-ride="carousel">
@@ -186,10 +187,13 @@
         <div class="col-sm-12 col-md-12 col-lg-6  mt-4">
             <h1 class="fw-bold display-4 titulo-seccion">Soporte a Equipos de Computo.</h1>
             <hr>
-            <p class="h5 mb-5 text-justify">
-                Ofrecemos soporte técnico especializado para una amplia gama de dispositivos, incluyendo laptops, computadoras de escritorio, sistemas de punto de venta, cámaras de vigilancia y servidores. Nuestro equipo está capacitado para resolver desde fallas básicas hasta problemas complejos, garantizando un funcionamiento óptimo de tus equipos y la continuidad de tus operaciones.
+
+            <p class="h5 mb-5  p-4 bg-light little-zoom border border-2">
+                Ofrecemos soporte técnico especializado para una amplia gama de dispositivos, incluyendo <b> laptops, computadoras de escritorio, sistemas de punto de venta, cámaras de vigilancia y servidores.</b> 
+
+              Nuestro equipo está capacitado para resolver desde fallas básicas hasta problemas complejos, garantizando un funcionamiento óptimo de tus equipos y la continuidad de tus operaciones.  
             </p>
-            <h5 >
+            <h5 class="mb-4">
                 <b> Brindamos soporte técnico a: </b>
                 <ul>
                     <li>Laptops</li>
@@ -199,82 +203,228 @@
                     <li>Servidores</li>
                 </ul>
             </h5>
+            <button class="btn btn-dark btn-lg  border border-2 text-start p-3" data-bs-toggle="modal" data-bs-target="#cotiza_soporte">
+                <i class="fa fa-info-circle mx-2"></i>
+                Cotizar Reparación
+            </button>
         </div>
-
-
-
-
     </div>
 </div>
 
+
+
+<!-- Modal -->
+<div class="modal fade" id="cotiza_soporte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg  modal-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h1 class="modal-title fs-10 fw-bold" id="exampleModalLabel"> <i class="fa-solid fa-screwdriver-wrench mx-3"></i> Cotizar Soporte Técnico</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex justify-content-around bg-light " style="font-size: 20px; font-family: sans-serif;">
+
+        <div class="row justify-content-center">
+            <!-- Estas son las notficaciones al enviar algo por correo -->
+            <div class="col-11 d-none" id="error">
+                <div class="alert alert-danger fw-bold d-flex align-items-center">
+                    <i class="fa fa-info-circle fa-2x mx-3 "></i>
+                    Se deben llenar todos los campos del formulario.!
+                </div>
+            </div>
+
+            <div class="col-11 d-none" id="success">
+                <div class="alert alert-primary fw-bold d-flex align-items-center">
+                    <i class="fa fa-info-circle fa-2x mx-3 "></i>
+                        El mensaje se envio correctamente.!
+                </div>
+            </div>
+            <!-- Estas son las notficaciones al enviar algo por correo -->
+
+            <div class="col-12">
+                <div class="form-group w-100 px-5">
+                    <label for="" class="my-2 h3 label-modal">Nombre Completo</label>
+                    <input type="text" class="form-control input-modal" name="" id="nombre_modal" >
+                </div>
+            </div>
+
+            <div class="col-12 mt-4">
+                <div class="form-group w-100 px-5">
+                    <label for="" class="my-2 h3 label-modal">Número de Teléfono</label>
+                    <input type="text" class="form-control input-modal" name="" id="telefono_modal" >
+                </div>
+            </div>
+
+            <div class="col-12 mt-4">
+                <div class="form-group w-100 px-5">
+                    <label for="" class="my-2 h3 label-modal">Cuentanos tu problema</label>
+                    <textarea name="" id="mensaje_modal" rows="5" class="form-control input-modal h-100 w-100"></textarea>
+                </div>
+            </div>
+
+
+            
+            <div class="col-12 mt-4 text-center">
+                <div class="form-group w-100 px-5">
+                    <button class="btn btn-dark btn-lg w-100 py-4 h1" onclick="correo_modal()">
+                        Enviar
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 <hr>
-<br id="desarrollo"><br>
+<br id="portafolio"><br>
 
 <div class="container py-5">
-  <h2 class="text-center mb-4">Mi Galería de Proyectos</h2>
+  <h1 class="text-center mb-4 titulo-seccion display-3 ">Portafolio de Proyectos</h1>
   
+
+
   <!-- Botones de filtro -->
-  <div class="text-center mb-4">
-    <button class="btn btn-outline-primary me-2 active" data-filter="*">Todos</button>
-    <button class="btn btn-outline-primary me-2" data-filter=".web">Web</button>
-    <button class="btn btn-outline-primary me-2" data-filter=".reparacion">Reparación</button>
-    <button class="btn btn-outline-primary" data-filter=".seguridad">Seguridad Informática</button>
+  <div class="text-center mb-4 row justify-content-center filtros-lg">
+    <div class="col-12 col-sm-12  mt-1 p-1 col-md-4 col-lg-auto">
+        <button class="btn btn-outline-dark  active" data-filter="*">
+            <i class="fa fa-eye mx-2"></i>
+            Todos
+        </button>
+    </div>
+    <div class="col-12 col-sm-12  mt-1 p-1 col-md-4 col-lg-auto">
+        <button class="btn btn-outline-dark " data-filter=".web">
+            <i class="fa fa-newspaper mx-2"></i>
+            Paginas Web
+        </button>
+    </div>
+
+    <div class="col-12 col-sm-12  mt-1 p-1 col-md-4 col-lg-auto">
+        <button class="btn btn-outline-dark " data-filter=".app">
+            <i class="fa fa-flask mx-2"></i>
+            Aplicaciones Web
+        </button>
+    </div>
+
+    <div class="col-12 col-sm-12  mt-1 p-1 col-md-4 col-lg-auto">
+        <button class="btn btn-outline-dark " data-filter=".sporte">
+            <i class="fa fa-computer mx-2"></i>
+            Soporte Técnico
+        </button>
+    </div>
+
+    <div class="col-12 col-sm-12  mt-1 p-1 col-md-4 col-lg-auto">
+        <button class="btn btn-outline-dark " data-filter=".seguridad">
+        <i class="fa fa-shield mx-2"></i>
+            Seguridad Informática
+        </button>
+    </div>
   </div>
 
+
+
+
+
+
+
   <!-- Galería -->
-  <div class="row" id="gallery">
+  <div class="row" id="gallery" style="height: 800px;">
 
     
-    <div class="col-2 grid-item web">
-      <div class="card">
-        <img src="img/proyectos/plastimega.jpg" class="card-img-top img-fluid" alt="Web 1">
-        <div class="card-body">
-          <h5 class="card-title">Plastimega</h5>
+    <div class="col-auto mt-4 grid-item web">
+      <div class="p-0 shadow shadow-sm portafolio-container">
+        <img src="img/proyectos/plastimega.jpg" class=" img-fluid" alt="Web 1">
+        <div class="portafolio-overlay">
+            <div class="overlay-text text-center">
+                <a href="https://resendiz1.github.io/plastimega2/" class="text-white" target="_blank">
+                    <i class="fa fa-plus text-white fa-2x"></i><br>
+                    <small>Visitar</small>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-auto mt-4 grid-item web">
+      <div class="p-0 shadow shadow-sm portafolio-container">
+        <img src="img/proyectos/tacaro.jpg" class="img-fluid" alt="Reparación 2">
+        <div class="portafolio-overlay">
+            <div class="overlay-text text-center">
+                <a href="https://resendiz1.github.io/ta-caro/" class="text-white" target="_blank">
+                    <i class="fa fa-plus  fa-2x"></i> <br>
+                     <small>Visitar</small>
+
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-auto mt-4 grid-item seguridad">
+      <div class="p-0 shadow shadow-sm portafolio-container">
+        <img src="img/seguridad/clonar_facebook.jpg" class="img-fluid" alt="Reparación 2">
+        <div class="portafolio-overlay">
+            <div class="overlay-text text-center">
+                <a href="https://youtu.be/xcsyQ0cXeXk" class="text-white" target="_blank">
+                    <i class="fa fa-plus  fa-2x"></i> <br>
+                    <small>Clonando Facebook con Pyphisher</small>
+                </a>
+            </div>
         </div>
       </div>
     </div>
 
 
-    <div class="col-2 grid-item reparacion">
-      <div class="card">
-        <img src="img/proyectos/angie.png" class="card-img-top" alt="Reparación 1">
-        <div class="card-body">
-          <h5 class="card-title">Reparación 1</h5>
-        </div>
+
+
+
+
+
+
+    <div class="col-auto mt-4 grid-item app">
+      <div class="p-0 shadow shadow-sm portafolio-container">
+        <img src="img/proyectos/angie.png" class="img-fluid" alt="Reparación 1">
+
       </div>
     </div>
-    <div class="col-2 grid-item seguridad">
-      <div class="card">
-        <img src="img/proyectos/estadia.jpg" class="card-img-top" alt="Seguridad 1">
-        <div class="card-body">
-          <h5 class="card-title">Seguridad 1</h5>
-        </div>
+
+    <div class="col-auto mt-4 grid-item app">
+      <div class="p-0 shadow shadow-sm portafolio-container">
+        <img src="img/proyectos/estadia.jpg" class="img-fluid" alt="Seguridad 1">
       </div>
     </div>
-    <div class="col-2 grid-item web">
-      <div class="card">
-        <img src="img/programas/office.webp" class="card-img-top" alt="Web 2">
-        <div class="card-body">
-          <h5 class="card-title">Proyecto Web 2</h5>
-        </div>
+
+
+
+    <div class="col-auto mt-4 grid-item app">
+      <div class="p-0 shadow shadow-sm portafolio-container">
+        <img src="img/proyectos/qualitrack.jpg" class="img-fluid" alt="Seguridad 2">
+
       </div>
     </div>
-    <div class="col-2 grid-item reparacion">
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250?text=Reparación+2" class="card-img-top" alt="Reparación 2">
-        <div class="card-body">
-          <h5 class="card-title">Reparación 2</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-2 grid-item seguridad">
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250?text=Seguridad+2" class="card-img-top" alt="Seguridad 2">
-        <div class="card-body">
-          <h5 class="card-title">Seguridad 2</h5>
-        </div>
-      </div>
-    </div>
+
+
+
+
+    
   </div>
 </div>
 
@@ -557,8 +707,7 @@
 
 
 
-
-
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="/aos-master/dist/aos.js"></script>
 <script src="jquery/jquery-3.7.1.min.js"></script>
