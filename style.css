@@ -5,6 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +27,60 @@ nav{
   backdrop-filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.3); /* también oscurece un poco */
 }
+
+/* efecto parallax */
+.parallax-container {
+  height: 100%;
+  background-image: url('img/juegos/gtav.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 2rem;
+}
+
+
+
+
+/* css del slick css */
+  .slider {
+      width: 50%;
+      margin: 100px auto;
+  }
+
+  .slick-slide {
+    margin: 0px 20px;
+  }
+
+  .slick-slide img {
+    width: 100%;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+  }
+
+
+  .slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+  }
+  
+  .slick-active {
+    opacity: .5;
+  }
+
+  .slick-current {
+    opacity: 1;
+  }
+/* css del slick css */
+
 
 
 
@@ -53,14 +110,13 @@ nav{
 
 
 .input-modal{
-  font-size: 30px;
+  font-size: 20px;
   font-family:"Cascadia Code", sans-serif;
   border: none;
   background-color: #e8cf85;
 }
 
 .input-modal:focus{
-  font-size: 30px;
   font-family:"Cascadia Code", sans-serif;
   border: none;
   background-color: #ffd000;
@@ -71,7 +127,8 @@ nav{
 
 
 .label-modal{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
 }
 
 
@@ -108,6 +165,13 @@ nav{
 
 
 
+/* Fuentes */
+
+.cantata {
+  font-family: "Cantata One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 
 
@@ -124,7 +188,7 @@ nav{
   font-style: normal;
 }
 
-
+/* Fuentes */
 
 
 .img-carrusel {

@@ -32,15 +32,19 @@ function correo_modal(){
     let $nombre = document.getElementById('nombre_modal').value;
     let $telefono = document.getElementById('telefono_modal').value;
     let $mensaje = document.getElementById('mensaje_modal').value;
-    let $error = document.getElementById('error');
-    let $success = document.getElementById('success');
+    let $error = document.getElementById('error_modal');
+    let $success = document.getElementById('success_modal');
+    let $botton_modal = document.getElementById('sent_modal');
 
     if($nombre == '' || $telefono == '' || $mensaje == ''){
 
         $error.classList.remove('d-none')
+        $botton_modal.innerHTML= '<img src="../img/assets/loading.gif" class="text-center"  style="width:40px; height: 40px;">';
+
 
         setTimeout(()=>{
             $error.classList.add('d-none');
+                    $botton_modal.innerHTML= 'Enviar';
         },4000)
 
         return;
@@ -228,13 +232,17 @@ document.querySelectorAll('.menu-flotante').forEach(div =>{
   });
 
 
+}
 
 
 
+{
 
 
-
-
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
 
 
 
