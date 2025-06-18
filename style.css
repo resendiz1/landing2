@@ -40,8 +40,35 @@ nav{
   align-items: center;
   justify-content: center;
   text-align: center;
-
   padding: 2rem;
+}
+
+.parallax-container2 {
+  height: 100%;
+  background-image: url('img/desarrollo_web/Portada.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.parallax-container3 {
+  height: 100%;
+  background-image: url('img/desarrollo_web/Portada.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
 }
 
 
@@ -414,8 +441,8 @@ img {
 
 .luckiest-guy-regular {
   font-family: "Luckiest Guy", cursive;
-  font-weight: 400;
-  font-size: 5vw;
+  font-weight: 100;
+  font-size: 3vw;
   font-style: normal;
 }
 
@@ -481,6 +508,18 @@ img {
     margin-left: 5px;
     animation: blink 0.7s infinite;
 }
+
+
+.cursor2{
+    display: inline-block;
+    width: 0.04em; /* Se ajusta según el tamaño del texto */
+    height: 1em;
+    background-color: white;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+
+
 
 @keyframes blink{
     50%{

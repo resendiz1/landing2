@@ -129,11 +129,38 @@
 
 
 
-<div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
-    <div class="row d-flex align-items-center justify-content-around p-5">
-
+<div class="container-fluid" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+    <div class="row d-flex align-items-center justify-content-around p-0 p-lg-5">
         
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center mt-4">
+
+        <div class="col-sm-12 col-md-12 col-lg-6  mt-4">
+            <h1 class="fw-bold display-6 titulo-seccion">Soporte a Equipos de Computo.</h1>
+            <hr>
+
+            <p class="h5 mb-5  p-4 bg-light little-zoom border border-2">
+                Ofrecemos soporte técnico especializado para una amplia gama de dispositivos, incluyendo <b> laptops, computadoras de escritorio, sistemas de punto de venta, cámaras de vigilancia y servidores.</b> 
+
+              Nuestro equipo está capacitado para resolver desde fallas básicas hasta problemas complejos, garantizando un funcionamiento óptimo de tus equipos y la continuidad de tus operaciones.  
+            </p>
+            <h5 class="mb-4">
+                <b> Brindamos soporte técnico a: </b>
+                <ul>
+                    <li>Laptops</li>
+                    <li>Computadoras de Escritorio</li>
+                    <li>Puntos de venta</li>
+                    <li>Camaras de vigilancia</li>
+                    <li>Servidores</li>
+                </ul>
+            </h5>
+            <button class="btn btn-dark btn-lg  border border-2 text-start p-3" data-bs-toggle="modal" data-bs-target="#cotiza_soporte">
+                <i class="fa fa-info-circle mx-2"></i>
+                Cotizar Reparación
+            </button>
+        </div>
+
+
+         
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center mt-4 ">
             <div id="soporte" class="carousel slide" data-bs-interval="3000" data-bs-wrap="true" data-bs-ride="carousel">
                 <div class="carousel-inner">
 
@@ -182,33 +209,10 @@
                     <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
-        </div>
-        
+        </div>       
 
-        <div class="col-sm-12 col-md-12 col-lg-6  mt-4">
-            <h1 class="fw-bold display-6 titulo-seccion">Soporte a Equipos de Computo.</h1>
-            <hr>
 
-            <p class="h5 mb-5  p-4 bg-light little-zoom border border-2">
-                Ofrecemos soporte técnico especializado para una amplia gama de dispositivos, incluyendo <b> laptops, computadoras de escritorio, sistemas de punto de venta, cámaras de vigilancia y servidores.</b> 
 
-              Nuestro equipo está capacitado para resolver desde fallas básicas hasta problemas complejos, garantizando un funcionamiento óptimo de tus equipos y la continuidad de tus operaciones.  
-            </p>
-            <h5 class="mb-4">
-                <b> Brindamos soporte técnico a: </b>
-                <ul>
-                    <li>Laptops</li>
-                    <li>Computadoras de Escritorio</li>
-                    <li>Puntos de venta</li>
-                    <li>Camaras de vigilancia</li>
-                    <li>Servidores</li>
-                </ul>
-            </h5>
-            <button class="btn btn-dark btn-lg  border border-2 text-start p-3" data-bs-toggle="modal" data-bs-target="#cotiza_soporte">
-                <i class="fa fa-info-circle mx-2"></i>
-                Cotizar Reparación
-            </button>
-        </div>
     </div>
 </div>
 
@@ -297,13 +301,15 @@
 <hr>
 <br id="portafolio"><br>
 
-<div class="container py-5">
+<div class="container-fluid py-5  ">
   <h1 class="text-center mb-4 titulo-seccion display-6 ">Portafolio de Proyectos</h1>
   
 
 
+  
+
   <!-- Botones de filtro -->
-  <div class="text-center mb-4 row justify-content-center filtros-lg">
+  <div class="text-center mb-4 row justify-content-center d-none d-md-flex">
     <div class="col-12 col-sm-12  mt-1 p-1 col-md-4 col-lg-auto">
         <button class="btn btn-outline-dark  active" data-filter="*">
             <i class="fa fa-eye mx-2"></i>
@@ -339,6 +345,22 @@
     </div>
   </div>
 
+<!-- Dropdown de filtros (solo visible en pantallas pequeñas) -->
+<div class="text-center mb-4 d-flex d-md-none justify-content-center">
+  <div class="dropdown">
+    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownFiltros" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa fa-list me-2"></i>
+      Filtrar por categoría
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownFiltros">
+      <li><a class="dropdown-item btn-dark"  data-filter="*"><i class="fa fa-eye me-2"></i>Todos</a></li>
+      <li><a class="dropdown-item btn-dark"  data-filter=".web"><i class="fa fa-newspaper me-2"></i>Páginas Web</a></li>
+      <li><a class="dropdown-item btn-dark"  data-filter=".app"><i class="fa fa-flask me-2"></i>Aplicaciones Web</a></li>
+      <li><a class="dropdown-item btn-dark"  data-filter=".sporte"><i class="fa fa-computer me-2"></i>Soporte Técnico</a></li>
+      <li><a class="dropdown-item btn-dark"  data-filter=".seguridad"><i class="fa fa-shield me-2"></i>Seguridad Informática</a></li>
+    </ul>
+  </div>
+</div>
 
 
 
@@ -421,7 +443,7 @@
 
 
 
-<br><br  id="instalacion" ><br>
+<br><br  id="instalacion" ><br> <br>
 <hr>
 
 
@@ -523,10 +545,10 @@
 <hr>
 
 
-<div class="container-fluid mt-5 parallax-container">
+<div class="container-fluid mt-5 parallax-container py-5">
 
-    <div class="row p-5 justify-content-center" >
-        <div class="col-11 text-center text-white p-5" style="background-color: rgba(22, 22, 22, 0.4);">
+    <div class="row py-5 justify-content-center" >
+        <div class="col-12 text-center text-white pb-5" style="background-color: rgba(22, 22, 22, 0.4);">
             <h1 class="fw-bold titulo-seccion display-5">🎮 ¡El Juego Comienza Aquí!.</h1>
             <h3> Venta de videojuegos para consolas de videojuegos para PC. </h3>
         </div>
@@ -577,11 +599,11 @@
 <br><br id="contacto"><br>
 <hr>
 
-<div class="container mt-5 fade-up" >
+<div class="container-fluid mt-5 fade-up" >
 
     <div class="row p-5">
         <div class="col-12">
-            <span class="luckiest-guy-regular">Contacto: </span>
+            <span class="luckiest-guy-regular">Contactanos: </span>
         </div>
     </div>
 
@@ -626,103 +648,116 @@
         </div>
     </div>
         
-    <div class="row p-5">
-        <div class="col-sm-12 col-md-12 col-lg-6 mt-5">
+    <div class="row p-5 parallax-container2 justify-content-around">
+
+
+        <div class="col-sm-12 col-md-12 col-lg-5 mt-5 px-5 py-4 rounded  shadow-sm border border-4" style="background-color: rgba(255, 255, 255, 0.8);" >
             <div class="row d-flex align-items-center fw-bold justify-content-center">
-                <div class="col-auto">
+                <div class="col-12 text-center p-1">
                     <i class="fa-brands fa-whatsapp fa-4x text-success"></i>
-                </div>
-                <div class="col-auto">
                     <h1>WhatsApp</h1>
                 </div>
-                <div class="col-auto">
-                    <h1>2491725430</h1>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-12 p-4 text-center">
-                    <a href="https://walink.co/e7dec1" class="btn btn-success">Mandar WhatsApp</a>
+                <div class="col-auto text-center p-1">
+                   <a href="https://walink.co/e7dec1" target="_blank" class="text-dark">
+                    <h1 class="fw-bold">2381271940</h1>
+                   </a> 
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 mt-5">
-                <div class="row d-flex align-items-center fw-bold justify-content-center">
-                    <div class="col-auto">
-                        <i class="fa-solid fa-phone-volume fa-4x"></i>
-                    </div>
-                    <div class="col-auto">
-                        <h1>Teléfono: </h1>
-                    </div>
-                    <div class="col-auto">
-                        <h1>2211959921</h1>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12 p-4  text-center">
-                        <a href="tel:+522211959921" class="btn btn-primary">Llamar</a>
-                    </div>
-                </div>
-        </div>
 
-        <div class="col-sm-12 col-md-12 col-lg-6 mt-5">
-                <div class="row d-flex align-items-center fw-bold justify-content-center">
-                    <div class="col-auto">
-                        <i class="fa-solid fa-phone-volume fa-4x"></i>
-                    </div>
-                    <div class="col-auto">
-                        <h1>Teléfono: </h1>
-                    </div>
-                    <div class="col-auto">
-                        <h1>2381271940</h1>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12 p-4  text-center">
-                        <a href="tel:+522381271940" class="btn btn-primary">Llamar</a>
-                    </div>
-                </div>
-        </div>
 
-        <div class="col-sm-12 col-md-12 col-lg-6 mt-5">
-            <form action="">
+        <div class="col-sm-12 col-md-12 col-lg-5 mt-5 px-5 py-4 rounded  shadow-sm border border-4" style="background-color: rgba(255, 255, 255, 0.8);" >
             <div class="row d-flex align-items-center fw-bold justify-content-center">
-                <div class="col-auto">
+                <div class="col-12 text-center p-1">
                     <i class="fa-brands fa-whatsapp fa-4x text-success"></i>
+                    <h1>WhatsApp</h1>
                 </div>
-                <div class="col-auto">
-                    <h1>WhatsApp: </h1>
-                </div>
-                <div class="col-auto">
-                    <h1>2381271940</h1>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-12 p-4  text-center">
-                    <a href="https://walink.co/db1ec5" class="btn btn-success">Mandar WhatsApp</a>
+                <div class="col-auto text-center p-1">
+                   <a href="https://walink.co/e7dec1" target="_blank" class="text-dark">
+                    <h1 class="fw-bold">2491725430</h1>
+                   </a> 
                 </div>
             </div>
-            </form>
         </div>
 
-        <div class="col-sm-12 col-md-12 col-lg-12 mt-5">
+
+        
+        <div class="col-sm-12 col-md-12 col-lg-5 mt-5 px-5 py-4 rounded  shadow-sm border border-4" style="background-color: rgba(255, 255, 255, 0.8);" >
             <div class="row d-flex align-items-center fw-bold justify-content-center">
-                <div class="col-auto">
+                <div class="col-12 text-center p-1">
                     <i class="fa-solid fa-phone-volume fa-4x"></i>
-                </div>
-                <div class="col-auto">
                     <h1>Teléfono: </h1>
                 </div>
-                <div class="col-auto">
-                    <h1>2381501369</h1>
+                    <div class="col-sm-12 col-md-12 col-lg-12 p-1  text-center">
+                        <a href="tel:+522211959921" target="_blank" class=" text-dark">
+                            <h1 class="fw-bold">
+                                2211959921
+                            </h1>
+                        </a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-5 mt-5 px-5 py-4 rounded  shadow-sm border border-4" style="background-color: rgba(255, 255, 255, 0.8);" >
+            <div class="row d-flex align-items-center fw-bold justify-content-center">
+                <div class="col-12 text-center p-1">
+                    <i class="fa-solid fa-phone-volume fa-4x"></i>
+                    <h1>Teléfono: </h1>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-12 p-4  text-center">
-                    <a href="tel:+522381501369" class="btn boton btn-primary">Llamar</a>
+                <div class="col-sm-12 col-md-12 col-lg-12 p-1  text-center">
+                    <a href="tel:+522381271940" target="_blank" class=" text-dark">
+                        <h1 class="fw-bold">
+                            2381271940
+                        </h1>
+                    </a>
                 </div>
             </div>
         </div>
 
+
+        <div class="col-11 mt-5 px-5 py-4 rounded  shadow-sm border border-4" style="background-color: rgba(255, 255, 255, 0.8);" >
+            <div class="row d-flex align-items-center fw-bold justify-content-center">
+                <div class="col-12 text-center p-1">
+                    <i class="fa-solid fa-phone-volume fa-4x"></i>
+                    <h1>Teléfono: </h1>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 p-1  text-center">
+                    <a href="tel:+522381501369" target="_blank" class=" text-dark">
+                        <h1 class="fw-bold">
+                            2381501369
+                        </h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
     </div>
-    <div class="row p-5">
-        <div class="col-12">
+
+
+    <!-- <div class="row mt-5 justify-content-center">
+        <div class="col-11">
             <span class="luckiest-guy-regular">Ubicación: </span>
         </div>
 
-        <div class="col-12">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d227.64285379901168!2d-97.36809454686437!3d18.428452439878765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI1JzQyLjYiTiA5N8KwMjInMDQuNyJX!5e1!3m2!1ses-419!2smx!4v1743360240411!5m2!1ses-419!2smx" width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="col-11">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d227.64285379901168!2d-97.36809454686437!3d18.428452439878765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI1JzQyLjYiTiA5N8KwMjInMDQuNyJX!5e1!3m2!1ses-419!2smx!4v1743360240411!5m2!1ses-419!2smx" width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="border border-dark rounded border-5 "></iframe>
         </div>
 
+    </div> -->
+</div>
+
+
+<div class="container-fluid p-5 bg-dark mt-5">
+    <div class="row">
+        <div class="col-12 text-center text-white cascadia">
+            <h1>
+                &lt;Juan Pancho's/&gt; <span class="cursor2 "></span>
+            </h1>
+        </div>
+        <div class="col-12 font-weight-bold  p-2 text-center text-white">
+           With <i class="fa fa-heart"></i> <a href="https://github.com/resendiz1" class="text-white" target="_blank"> Arturo Resendiz</a> by: 
+        </div>
     </div>
 </div>
 
