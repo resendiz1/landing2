@@ -256,7 +256,7 @@ document.querySelectorAll('.menu-flotante').forEach(div =>{
         //configuraciones adicionales
         voz.lang = "es-MX";
         voz.rate =1;
-        voz.pitch=3;
+        voz.pitch= 1;
 
         speechSynthesis.speak(voz);
     
