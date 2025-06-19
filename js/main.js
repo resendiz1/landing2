@@ -86,13 +86,6 @@ function correo_modal(){
 
 
 
-
-
-
-
-
-
-
 function correo(){
 
     let $nombre = document.getElementById('nombre').value;
@@ -231,19 +224,88 @@ document.querySelectorAll('.menu-flotante').forEach(div =>{
     });
   });
 
-
 }
 
 
-
 {
-
-
       $(".lazy").slick({
         lazyLoad: 'ondemand', // ondemand progressive anticipated
         infinite: true
       });
 
+}
+
+
+
+// leer por voz con la API Speech
+
+{
+
+    const leer = document.getElementById('leer');
+    const pausar = document.getElementById('pausar');
+    const reanudar = document.getElementById('reanudar');
+    const detener = document.getElementById('detener');
+
+
+
+    leer.addEventListener('click', function(){
+    
+        const texto = document.getElementById('texto').textContent;
+        const voz = new SpeechSynthesisUtterance(texto);
+
+        //configuraciones adicionales
+        voz.lang = "es-MX";
+        voz.rate =1;
+        voz.pitch=3;
+
+        speechSynthesis.speak(voz);
+    
+        pausar.classList.remove('d-none')
+        leer.classList.add('d-none')
+        detener.classList.remove('d-none');
+
+    })
+
+    pausar.addEventListener('click', function(){
+        if(speechSynthesis.speaking && !speechSynthesis.paused){
+    
+            speechSynthesis.pause();
+
+            pausar.classList.add('d-none');
+            reanudar.classList.remove('d-none');
+
+    
+        }
+        
+    })
+
+
+
+    reanudar.addEventListener('click', function(){
+        if(speechSynthesis.paused){
+            speechSynthesis.resume();
+            pausar.classList.remove('d-none');
+            reanudar.classList.add('d-none');
+            
+        }
+    })
+
+
+
+    detener.addEventListener('click', function(){
+        speechSynthesis.cancel();
+
+            leer.classList.remove('d-none');
+            pausar.classList.add('d-none');
+            reanudar.classList.add('d-none');
+            detener.classList.add('d-none');
+
+    })
+
 
 
 }
+
+
+
+
