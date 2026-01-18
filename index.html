@@ -249,21 +249,28 @@
             <div class="col-12">
                 <div class="form-group w-100 px-lg-5">
                     <label for="" class="my-2 h5 label-modal">Nombre Completo</label>
-                    <input type="text" class="form-control input-modal" name="" id="nombre_modal" >
+                    <input type="text" class="form-control input-modal" name="name" id="nombre_modal" >
                 </div>
             </div>
 
             <div class="col-12 mt-4">
                 <div class="form-group w-100 px-lg-5">
                     <label for="" class="my-2 h5 label-modal">Número de Teléfono</label>
-                    <input type="text" class="form-control input-modal" name="" id="telefono_modal" >
+                    <input type="text" class="form-control input-modal" name="phone" id="telefono_modal" >
+                </div>
+            </div>
+
+            <div class="col-12 mt-4">
+                <div class="form-group w-100 px-lg-5">
+                    <label for="" class="my-2 h5 label-modal">Correo Electrónico</label>
+                    <input type="text" class="form-control input-modal" name="mail" id="mail_modal" >
                 </div>
             </div>
 
             <div class="col-12 mt-4">
                 <div class="form-group w-100 px-lg-5">
                     <label for="" class="my-2 h5 label-modal">Cuentanos tu problema</label>
-                    <textarea name="" id="mensaje_modal" rows="5" class="form-control input-modal h-100 w-100"></textarea>
+                    <textarea name="message" id="mensaje_modal" rows="5" class="form-control input-modal h-100 w-100"></textarea>
                 </div>
             </div>
 
@@ -811,15 +818,19 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6 mt-2">
                         <label for="" class="fw-bold label-modal mb-3">Nombre: </label>
-                        <input type="text" id="nombre" class="form-control p-3 input-modal">
+                        <input type="text" name="name" id="name" class="form-control p-3 input-modal">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6 mt-2">
                         <label for="" class="fw-bold label-modal mb-3">Número de teléfono: </label>
-                        <input type="text" id="telefono" class="form-control p-3 input-modal">
+                        <input type="text" name="phone" id="phone" class="form-control p-3 input-modal">
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 mt-2">
+                        <label for="" class="fw-bold label-modal mb-3">Correo Electrónico: </label>
+                        <input type="text" name="mail" id="mail" class="form-control p-3 input-modal">
                     </div>
                     <div class="col-12 mt-2">
                         <label for="" class="fw-bold label-modal mb-3">Mensaje: </label>
-                        <textarea name=""  class="form-control w-100 input-modal" id="mensaje"></textarea>
+                        <textarea name="message"  class="form-control w-100 input-modal" id="message"></textarea>
                     </div>
                     <div class="col-12 mt-5 text-center">
                         <button onclick="correo()" class="btn btn-dark w-100   p-3 fs-4 fw-bold">

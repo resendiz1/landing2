@@ -23,7 +23,7 @@ var typed = new Typed('#escribible2', {
 
 
 window.onload = function(){
-    emailjs.init('mvA2hTi9RX5iDG6Ry');
+    emailjs.init('m202FJpgz8JlMhJrh');
 }
 
 function correo_modal(){
@@ -31,12 +31,13 @@ function correo_modal(){
 
     let $nombre = document.getElementById('nombre_modal').value;
     let $telefono = document.getElementById('telefono_modal').value;
+    let $mail = document.getElementById('mail_modal').value;
     let $mensaje = document.getElementById('mensaje_modal').value;
     let $error = document.getElementById('error_modal');
     let $success = document.getElementById('success_modal');
     let $botton_modal = document.getElementById('sent_modal');
 
-    if($nombre == '' || $telefono == '' || $mensaje == ''){
+    if($nombre == '' || $telefono == '' || $mail == '' || $mensaje == ''){
 
         $error.classList.remove('d-none')
         $botton_modal.innerHTML= '<img src="../img/assets/loading.gif" class="text-center"  style="width:40px; height: 40px;">';
@@ -57,10 +58,11 @@ function correo_modal(){
             to_email:'arturo.resendiz@grupopabsa.com',
             nombre: $nombre,
             telefono:$telefono,
+            email:$mail,
             mensaje: $mensaje
         }
 
-        emailjs.send("service_nnko2lm", 'template_zg0u38d', parametros)
+        emailjs.send("service_9m5rcfq", 'template_cfgl7gs', parametros)
             .then(response => {
 
                 $success.classList.remove('d-none');
@@ -71,6 +73,7 @@ function correo_modal(){
 
                     document.getElementById('nombre_modal').value = '';
                     document.getElementById('telefono_modal').value = '';
+                    document.getElementById('mail_modal').value = '';
                     document.getElementById('mensaje_modal').value = '';
                 
 
@@ -88,9 +91,10 @@ function correo_modal(){
 
 function correo(){
 
-    let $nombre = document.getElementById('nombre').value;
-    let $telefono = document.getElementById('telefono').value;
-    let $mensaje = document.getElementById('mensaje').value;
+    let $nombre = document.getElementById('name').value;
+    let $telefono = document.getElementById('phone').value;
+    let $mail = document.getElementById('mail').value;
+    let $mensaje = document.getElementById('message').value;
     let $error = document.getElementById('error');
     let $success = document.getElementById('success');
 
@@ -110,12 +114,13 @@ function correo(){
 
         let parametros = {
             to_email:'arturo.resendiz@grupopabsa.com',
-            nombre: $nombre,
-            telefono:$telefono,
-            mensaje: $mensaje
+            name: $nombre,
+            phone:$telefono,
+            email:$mail,
+            message: $mensaje
         }
 
-        emailjs.send("service_nnko2lm", 'template_zg0u38d', parametros)
+        emailjs.send("service_9m5rcfq", 'template_cfgl7gs', parametros)
             .then(response => {
 
                 $success.classList.remove('d-none');
@@ -124,9 +129,10 @@ function correo(){
                     $success.classList.add('d-none');
                 }, 4000)
 
-                    document.getElementById('nombre').value = '';
-                    document.getElementById('telefono').value = '';
-                    document.getElementById('mensaje').value = '';
+                    document.getElementById('name').value = '';
+                    document.getElementById('phone').value = '';
+                    document.getElementById('mail').value = '';
+                    document.getElementById('message').value = '';
                 
 
             },error =>{
